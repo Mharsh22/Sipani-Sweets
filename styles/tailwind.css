@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-image: url('../assets/OBJECTS.png');
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.regular-text {
+    font-weight: 400;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+
+
+#about-us-section{
+    position:relative;
+    background: linear-gradient(0deg, rgba(2, 36, 253, 0.28) 0%, rgba(49, 62, 141, 0.45) 100%), url('../assets/about.png'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+section#location-section {
+    position: relative;
+    background: linear-gradient(0deg, rgba(2, 36, 253, 0.28) 0%, rgba(49, 62, 141, 0.45) 100%), url(../assets/Crousel.png), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    
+}
+
+.testimonial-card{
+    background-image: url('../assets/entypo_quote.png');
+    background-repeat: no-repeat;
+    background-position: 7% 23%;
+}
+
+.footer-form input, .footer-form textarea{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+#logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.owl-carousel.owl-loaded{
+    position: relative;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 100px;
+    border-radius: 16px;
+    border: 0.5px solid rgba(0, 0, 0, 0.10)!important;
+    background: #313E8D!important;
+    color: white!important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* display: flex; */
+    width: 48px;
+    height: 48px;
+    padding: 14px 0px!important;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    left: -65px;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    right: -65px;
+}
+
+@media  only screen and ( max-width: 768px) {
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+        display: none!important;
+    }
+}
