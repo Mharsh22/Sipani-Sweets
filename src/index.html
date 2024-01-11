@@ -8,41 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Sipani's Bikaner</title>
 </head>
 
-<body>
+
+<body class="min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="lg:px-6 px-2 fixed top-0 w-full z-10 text-white bg-black bg-opacity-50 backdrop-blur-none ">
+    <header class="lg:px-6 px-2 fixed top-0 w-full z-10 text-white bg-black bg-opacity-50 backdrop-blur-none not-home">
         <div class="flex justify-between items-center mx-auto max-w-screen-xl">
             <div id="logo" class="md:w-auto w-28">
-                <a href="./index.html"> <img src="../assets/Logo.png" alt="logo"></a>
+                <a href="/"> <img src="http://127.0.0.1:8000/assets/Logo.png" alt="logo" /> </a>
             </div>
 
             <!-- Mobile-Icon -->
             <!-- Mobile-Icon -->
             <button onclick="menuToggle()" id="hamburger-icon" class="md:hidden block"
                 data-collapse-toggle="navbar-default" aria-controls="navbar-default" aria-expanded="false">
-                <i class="fa-solid fa-bars text-xl"></i>
+                <i class="fa-solid fa-bars text-xl"> </i>
             </button>
-
 
             <!-- Desktop -->
 
             <nav class="hidden md:flex gap-5">
-                <a href="./index.html">Home</a>
-                <a href="./categories.html">Categories</a>
-                <a href="./products.html">Shop</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="./contact.html">Contact</a>
+                <a class="hover:underline active-link" href="http://127.0.0.1:8000">Home</a>
+                <a class="" href="http://127.0.0.1:8000/categories">Categories</a>
+                <a class="" href="http://127.0.0.1:8000/products">Shop</a>
+                <a class="" href="http://127.0.0.1:8000/about-us">About Us</a>
+                <a class="" href="http://127.0.0.1:8000/contact">Contact</a>
             </nav>
             <div class="hidden md:block">
                 <ul id="social-icons" class="flex justify-between mx-5">
-                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"> </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-youtube"> </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"> </i>
+                        </a>
+                    </li>
                 </ul>
                 <div id="contact-number">
                     <p>+91 123-456-7890</p>
@@ -54,15 +67,27 @@
             class="md:hidden w-full h-0 overflow-hidden transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center text-white bg-black absolute left-0">
             <nav id="ulMenu"
                 class="flex flex-col duration-300 ease-out sm:transition-none mt-5 mx-4 md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
-                <a href="./index.html">Home</a>
-                <a href="./categories.html">Categories</a>
-                <a href="./products.html">Shop</a>
-                <a href="./about-us.html">About Us</a>
-                <a href="./contact.html">Contact</a>
+                <a href="http://127.0.0.1:8000">Home</a>
+                <a href="http://127.0.0.1:8000/categories">Categories</a>
+                <a href="http://127.0.0.1:8000/products">Shop</a>
+                <a href="http://127.0.0.1:8000/about-us">About Us</a>
+                <a href="http://127.0.0.1:8000/contact">Contact</a>
                 <ul id="social-icons" class="flex gap-5">
-                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"> </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-youtube"> </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"> </i>
+                        </a>
+                    </li>
                 </ul>
                 <div id="contact-number">
                     <p>+91 123-456-7890</p>
@@ -70,11 +95,10 @@
             </nav>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section id="hero">
         <div class="">
-            <img src="../assets/Crousel.png" alt="hero-banner" class="w-full object-cover">
+            <img src="http://127.0.0.1:8000/assets/Crousel.png" alt="hero-banner" class="w-full object-cover">
         </div>
     </section>
 
@@ -82,13 +106,13 @@
     <section id="category-section"
         class="w-fit mx-auto grid md:grid-cols-3 grid-cols-2 items-center justify-center gap-15 md:px-40 md:py-10 py-6 px-2">
         <div class="category-item ">
-            <a href='#'><img src="../assets/category1.png" alt="Category 1"></a>
+            <a href='#'><img src="http://127.0.0.1:8000/assets/category1.png" alt="Category 1"></a>
         </div>
         <div class="category-item ">
-            <a href='#'><img src="../assets/category2.png" alt="Category 2"></a>
+            <a href='#'><img src="http://127.0.0.1:8000/assets/category2.png" alt="Category 2"></a>
         </div>
         <div class="category-item md:col-auto col-span-2">
-            <a href='#'><img src="../assets/category3.png" alt="Category 3"></a>
+            <a href='#'><img src="http://127.0.0.1:8000/assets/category3.png" alt="Category 3"></a>
         </div>
     </section>
 
@@ -112,35 +136,36 @@
     <!-- Best Sellers Section -->
     <section id="best-seller-section" class="text-center md:p-24 py-6 px-2  flex flex-col md:gap-10 gap-6">
         <div class=" flex justify-center">
-            <img src="../assets/best-seller-logo.svg" alt="logo" class="md:block hidden">
-            <img src="../assets/mobile-best-seller-logo.png" alt="logo" class="md:hidden block">
+            <img src="http://127.0.0.1:8000/assets/best-seller-logo.svg" alt="logo" class="md:block hidden">
+            <img src="http://127.0.0.1:8000/assets/mobile-best-seller-logo.png" alt="logo" class="md:hidden block">
         </div>
 
         <div>
             <div class="owl-carousel owl-theme">
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 1" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 1"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -150,33 +175,34 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 2" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 2"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -187,31 +213,32 @@
                             </svg>
                         </div>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 3" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -221,33 +248,34 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 3" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -257,33 +285,34 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 1" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 1"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -293,33 +322,34 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 2" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 2"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -329,33 +359,34 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
                 <div class="item bg-white rounded-md shadow-md">
-                    <img src="../assets/best-seller.png" alt="Product 3" class="w-full  object-cover">
+                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
+                        class="w-full  object-cover">
                     <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
                         <p class="text-gray-800 font-bold">Laddu</p>
                         <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
+                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
@@ -365,11 +396,11 @@
                                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                             </svg>
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
-    
+
             </div>
 
             <div class='md:hidden   flex justify-center'>
@@ -380,9 +411,11 @@
     </section>
 
     <!-- Location -->
-    <section id="location-section" class="text-center flex md:flex-row flex-col justify-center items-center md:px-40 md:py-10 py-6 px-2 md:gap-14 gap-10">
+    <section id="location-section"
+        class="text-center flex md:flex-row flex-col justify-center items-center md:px-40 md:py-10 py-6 px-2 md:gap-14 gap-10">
         <div class="map-img md:h-auto h-[250px] md:w-auto w-full">
-            <img src="../assets/map.png" alt="Map Image" class="mx-auto md:rounded-[23.22px] rounded-lg object-fit md:w-auto h-full w-full">
+            <img src="http://127.0.0.1:8000/assets/map.png" alt="Map Image"
+                class="mx-auto md:rounded-[23.22px] rounded-lg object-fit md:w-auto h-full w-full">
         </div>
 
         <div class="flex justify-center flex-col text-white items-start md:gap-5 gap-2">
@@ -390,7 +423,8 @@
                 <i class="fa-solid fa-location-dot text-xl"></i>
             </div>
             <h1 class="md:text-3xl text-2xl uppercase">Location</h1>
-            <p class="md:text-xl text-base uppercase text-left">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016
+            <p class="md:text-xl text-base uppercase text-left">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+                Bangalore-560016
             </p>
             <div class="flex items-center gap-4 md:mt-0 mt-[8px]">
                 <div class="py-3 px-4 rounded flex justify-center bg-[#F7ED17]">
@@ -404,8 +438,10 @@
     <!-- Testimonials -->
     <section id="testimonials-section" class="text-center md:p-24 py-6 px-2 flex flex-col md:gap-10 gap-6">
         <div>
-            <img src="../assets/testimonials.svg" alt="Heading Image" class="mx-auto mb-6 md:block hidden">
-            <img src="../assets/mobile-testimonials.png" alt="testimonials logo" class="mx-auto md:hidden block">
+            <img src="http://127.0.0.1:8000/assets/testimonials.svg" alt="Heading Image"
+                class="mx-auto mb-6 md:block hidden">
+            <img src="http://127.0.0.1:8000/assets/mobile-testimonials.png" alt="testimonials logo"
+                class="mx-auto md:hidden block">
         </div>
 
         <div class="owl-carousel md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -559,64 +595,8 @@
 
         </div>
     </section>
-
     <!-- Footer -->
-    <footer class="bg-[#313E8D] text-white md:py-10 md:px-20 py-6 px-2 flex flex-col gap-6 md:gap-[37px]">
-        <div class="flex justify-between md:flex-row flex-col md:gap-0 gap-10">
-            <div class="">
-                <img src="../assets/Logo.png" alt="Store Logo">
-            </div>
-            <div class="grid grid-cols-1 md:flex sm:gap-[30px] md:gap-[60px] gap-6">
-                <div class="text-white bg-opacity-80">
-                    <h4 class="text-sm mb-4" style="color: rgba(255, 255, 255, 0.80);">Platform</h4>
-                    <ul class="flex text-base flex-col gap-4 ">
-                        <li>Plans & Pricing</li>
-                        <li>Personal AI Manager</li>
-                        <li>AI Business Writer</li>
-                    </ul>
-                </div>
-                <div class="text-white bg-opacity-80">
-                    <h4 class="text-sm mb-4" style="color: rgba(255, 255, 255, 0.80);">Company</h4>
-                    <ul class="flex text-base flex-col gap-4 ">
-                        <li>Blogs</li>
-                        <li>Careers</li>
-                        <li>News</li>
-                    </ul>
-                </div>
-                <div class="text-white bg-opacity-80">
-                    <h4 class="text-sm mb-4" style="color: rgba(255, 255, 255, 0.80);">Resources</h4>
-                    <ul class="flex text-base flex-col gap-4 ">
-                        <li>Documentation</li>
-                        <li>Papers</li>
-                        <li>Press Conferences</li>
-                    </ul>
-                </div>
-
-                <div class="text-white bg-opacity-80">
-                    <form class="footer-form" action="#" method="post">
-                        <div class="mb-2">
-                            <input type="text" id="name" placeholder="Enter your name" name="name"
-                                class="w-full px-4 py-2 rounded-md md:text-base text-sm">
-                        </div>
-                        <div class="mb-2">
-                            <input type="email" id="email" placeholder="Enter your email" name="email"
-                                class="w-full px-4 py-2 rounded-md md:text-base text-sm">
-                        </div>
-                        <div class="mb-2">
-                            <textarea id="message" name="message" placeholder="Message" rows="3"
-                                class="w-full px-4 py-2 rounded-md md:text-base text-sm"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-[#F7ED17] text-black px-6 py-2 rounded">Get in
-                            Touch</button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-
-        <hr style="background: rgba(255, 255, 255, 0.32); color: rgba(255, 255, 255, 0.80);">
-
-
+    <footer class="mt-auto bg-[#313E8D] text-white md:py-1 md:px-1 py-6 px-2 flex flex-col gap-6 md:gap-[37px]">
         <div class="container mx-auto flex md:flex-row flex-col items-center justify-between md:py-4 md:gap-0 gap-4"
             style="color: rgba(255, 255, 255, 0.80);">
             <p>© 2023 Maxwell Inc.</p>
@@ -627,8 +607,6 @@
             </div>
 
         </div>
-
-
     </footer>
 
 

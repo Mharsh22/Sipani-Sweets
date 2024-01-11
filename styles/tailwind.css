@@ -91,6 +91,16 @@ section#location-section {
     right: -65px;
 }
 
+.text-392d76 {
+    color: #392d76;
+}
+
+@layer components {
+    .active-link {
+        @apply font-bold underline text-392d76;
+    }
+}
+
 @media  only screen and ( max-width: 768px) {
     .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
         display: none!important;
