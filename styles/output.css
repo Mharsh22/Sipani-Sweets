@@ -578,6 +578,12 @@ video {
   }
 }
 
+.active-link {
+  font-weight: 700;
+  text-decoration-line: underline;
+  color: #392d76;
+}
+
 .fixed {
   position: fixed;
 }
@@ -670,6 +676,10 @@ video {
   margin-top: 8px;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .block {
   display: block;
 }
@@ -712,6 +722,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-24 {
@@ -1172,10 +1186,18 @@ section#location-section {
   right: -65px;
 }
 
+.text-392d76 {
+  color: #392d76;
+}
+
 @media  only screen and ( max-width: 768px) {
   .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
     display: none!important;
   }
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .focus\:border-red-500:focus {
@@ -1188,31 +1210,18 @@ section#location-section {
   outline-offset: 2px;
 }
 
+.active\:text-blue-500:active {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sm\:gap-\[30px\] {
-    gap: 30px;
-  }
-
   .sm\:p-2 {
     padding: 0.5rem;
-  }
-
-  .sm\:p-24 {
-    padding: 6rem;
-  }
-
-  .sm\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .sm\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .sm\:text-base {
@@ -1367,6 +1376,11 @@ section#location-section {
     padding: 2rem;
   }
 
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -1385,6 +1399,11 @@ section#location-section {
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .md\:py-10 {
@@ -1431,53 +1450,8 @@ section#location-section {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-auto {
-    grid-column: auto;
-  }
-
-  .lg\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:mb-5 {
-    margin-bottom: 1.25rem;
-  }
-
-  .lg\:ml-auto {
-    margin-left: auto;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:grid {
-    display: grid;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
-  .lg\:h-auto {
-    height: auto;
-  }
-
-  .lg\:w-auto {
-    width: auto;
-  }
-
-  .lg\:flex-grow {
-    flex-grow: 1;
   }
 
   .lg\:grid-cols-3 {
@@ -1492,116 +1466,9 @@ section#location-section {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:flex-row {
-    flex-direction: row;
-  }
-
-  .lg\:items-start {
-    align-items: flex-start;
-  }
-
-  .lg\:items-center {
-    align-items: center;
-  }
-
-  .lg\:gap-0 {
-    gap: 0px;
-  }
-
-  .lg\:gap-10 {
-    gap: 2.5rem;
-  }
-
-  .lg\:gap-14 {
-    gap: 3.5rem;
-  }
-
-  .lg\:gap-5 {
-    gap: 1.25rem;
-  }
-
-  .lg\:gap-6 {
-    gap: 1.5rem;
-  }
-
-  .lg\:gap-8 {
-    gap: 2rem;
-  }
-
-  .lg\:gap-\[37px\] {
-    gap: 37px;
-  }
-
-  .lg\:gap-\[60px\] {
-    gap: 60px;
-  }
-
-  .lg\:rounded-\[23\.22px\] {
-    border-radius: 23.22px;
-  }
-
-  .lg\:border-0 {
-    border-width: 0px;
-  }
-
-  .lg\:p-24 {
-    padding: 6rem;
-  }
-
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .lg\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .lg\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
-  }
-
-  .lg\:text-left {
-    text-align: left;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .lg\:transition-none {
-    transition-property: none;
   }
 }
 
