@@ -17,10 +17,11 @@
 
 <body class="min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="lg:px-6 px-2 fixed top-0 w-full z-10 text-white bg-black bg-opacity-50 backdrop-blur-none not-home">
-        <div class="flex justify-between items-center mx-auto max-w-screen-xl">
+    <header id="navbar"
+        class="lg:px-6 px-2 fixed top-0 w-full z-10 text-white bg-black bg-opacity-50 backdrop-blur-none transition duration-1000">
+        <div class="flex justify-between items-center mx-auto transition-max-width duration-1000 max-w-screen-xl">
             <div id="logo" class="md:w-auto w-28">
-                <a href="/"> <img src="http://127.0.0.1:8000/assets/Logo.png" alt="logo" /> </a>
+                <a href="/"> <img id="logo-img" src="../assets/Logo.png" alt="logo"> </a>
             </div>
 
             <!-- Mobile-Icon -->
@@ -33,11 +34,11 @@
             <!-- Desktop -->
 
             <nav class="hidden md:flex gap-5">
-                <a class="hover:underline active-link" href="http://127.0.0.1:8000">Home</a>
-                <a class="" href="http://127.0.0.1:8000/categories">Categories</a>
-                <a class="" href="http://127.0.0.1:8000/products">Shop</a>
-                <a class="" href="http://127.0.0.1:8000/about-us">About Us</a>
-                <a class="" href="http://127.0.0.1:8000/contact">Contact</a>
+                <a class="hover:underline active-link" href="..">Home</a>
+                <a class="" href="../categories">Categories</a>
+                <a class="" href="../products">Shop</a>
+                <a class="" href="../about-us">About Us</a>
+                <a class="" href="../contact">Contact</a>
             </nav>
             <div class="hidden md:block">
                 <ul id="social-icons" class="flex justify-between mx-5">
@@ -62,59 +63,49 @@
                 </div>
             </div>
         </div>
-
-        <div id="menu"
-            class="md:hidden w-full h-0 overflow-hidden transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center text-white bg-black absolute left-0">
-            <nav id="ulMenu"
-                class="flex flex-col duration-300 ease-out sm:transition-none mt-5 mx-4 md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
-                <a href="http://127.0.0.1:8000">Home</a>
-                <a href="http://127.0.0.1:8000/categories">Categories</a>
-                <a href="http://127.0.0.1:8000/products">Shop</a>
-                <a href="http://127.0.0.1:8000/about-us">About Us</a>
-                <a href="http://127.0.0.1:8000/contact">Contact</a>
-                <ul id="social-icons" class="flex gap-5">
-                    <li>
-                        <a href="">
-                            <i class="fa-brands fa-instagram"> </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-brands fa-youtube"> </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa-brands fa-facebook"> </i>
-                        </a>
-                    </li>
-                </ul>
-                <div id="contact-number">
-                    <p>+91 123-456-7890</p>
-                </div>
-            </nav>
-        </div>
     </header>
-    <!-- Hero Section -->
-    <section id="hero">
+
+    <section id="hero" class="md:h-screen overflow-hidden">
         <div class="">
-            <img src="http://127.0.0.1:8000/assets/Crousel.png" alt="hero-banner" class="w-full object-cover">
+            <img src="../assets/Crousel.png" alt="hero-banner" class="w-full md:h-screen h-[50vh] object-cover">
         </div>
     </section>
 
-    <!-- Categories/Collections -->
-    <section id="category-section"
-        class="w-fit mx-auto grid md:grid-cols-3 grid-cols-2 items-center justify-center gap-15 md:px-40 md:py-10 py-6 px-2">
-        <div class="category-item ">
-            <a href='#'><img src="http://127.0.0.1:8000/assets/category1.png" alt="Category 1"></a>
+    <div id="category-section" class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:px-40 md:py-10 py-6 px-2">
+        <!-- Box 1 -->
+        <div class="relative h-[350px] w-full md:col-span-1 col-span-1 rounded-md bg-cover bg-no-repeat bg-center p-4"
+            style="background-image: url('../assets/category_1.png');">
+            <div
+                class="rounded-md absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-[rgba(33,42,96,0.69)]">
+            </div>
+            <div
+                class="absolute bottom-4 right-[40%] break-words text-3xl font-semibold italic tracking-wide text-yellow-400">
+                Item 1</div>
         </div>
-        <div class="category-item ">
-            <a href='#'><img src="http://127.0.0.1:8000/assets/category2.png" alt="Category 2"></a>
+
+        <!-- Box 2 -->
+        <div class="relative h-[350px] w-full md:col-span-1 col-span-1 rounded-md bg-cover bg-no-repeat bg-center p-4"
+            style="background-image: url('../assets/category_2.png');">
+            <div
+                class="rounded-md absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-[rgba(33,42,96,0.69)]">
+            </div>
+            <div
+                class="absolute bottom-4 right-[40%] break-words text-3xl font-semibold italic tracking-wide text-yellow-400">
+                Item 2</div>
         </div>
-        <div class="category-item md:col-auto col-span-2">
-            <a href='#'><img src="http://127.0.0.1:8000/assets/category3.png" alt="Category 3"></a>
+
+        <!-- Box 3 -->
+        <div class="relative h-[350px] w-full md:col-span-1 col-span-2 rounded-md bg-cover bg-no-repeat bg-center p-4"
+            style="background-image: url('../assets/category_3.png');">
+            <div
+                class="rounded-md absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-[rgba(33,42,96,0.69)]">
+            </div>
+            <div
+                class="absolute bottom-4 right-[40%] break-words text-3xl font-semibold italic tracking-wide text-yellow-400">
+                Item 3</div>
         </div>
-    </section>
+    </div>
+
 
     <!-- About us -->
     <section id="about-us-section" class="text-center md:px-40 md:py-10 py-6 px-2">
@@ -131,290 +122,34 @@
             <a href="#" class="bg-[#F7ED17] text-black py-4 px-14 rounded-md inline-block">Explore</a>
         </div>
     </section>
-
-
-    <!-- Best Sellers Section -->
     <section id="best-seller-section" class="text-center md:p-24 py-6 px-2  flex flex-col md:gap-10 gap-6">
         <div class=" flex justify-center">
-            <img src="http://127.0.0.1:8000/assets/best-seller-logo.svg" alt="logo" class="md:block hidden">
-            <img src="http://127.0.0.1:8000/assets/mobile-best-seller-logo.png" alt="logo" class="md:hidden block">
+            <img src="../assets/best-seller-logo.svg" alt="logo" class="md:block hidden">
+            <img src="../assets/mobile-best-seller-logo.png" alt="logo" class="md:hidden block">
         </div>
 
         <div>
             <div class="owl-carousel owl-theme">
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 1"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
+                <div
+                    class="item w-80 h-80 bg-white rounded-xl shadow-md my-4 flex-col justify-start items-start inline-flex">
+                    <img class="w-80 h-64 rounded-tl-xl rounded-tr-xl border" src="../assets/best-seller.png" />
+                    <div class="self-stretch h-16 px-5 pt-2.5 pb-5 rounded-xl flex-col justify-start items-center gap-2.5 flex">
+                        <div class="text-black text-3xl font-medium font-['Lato']">Laddu</div>
                     </div>
-
                 </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 2"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 1"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 2"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="item bg-white rounded-md shadow-md">
-                    <img src="http://127.0.0.1:8000/assets/best-seller.png" alt="Product 3"
-                        class="w-full  object-cover">
-                    <div class="flex flex-col items-center px-5 pb-5 pt-2.5">
-                        <p class="text-gray-800 font-bold">Laddu</p>
-                        <div id="star-ratings" class="flex items-center">
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                            <svg class="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <div class='md:hidden   flex justify-center'>
+            <div class='md:hidden flex justify-center'>
                 <a href="./products.html" class="bg-white py-4 px-14 rounded-lg shadow-md">View all</a>
             </div>
         </div>
 
     </section>
-
     <!-- Location -->
     <section id="location-section"
         class="text-center flex md:flex-row flex-col justify-center items-center md:px-40 md:py-10 py-6 px-2 md:gap-14 gap-10">
-        <div class="map-img md:h-auto h-[250px] md:w-auto w-full">
-            <img src="http://127.0.0.1:8000/assets/map.png" alt="Map Image"
+        <div class="map-img md:h-auto h-[350px] md:w-auto w-full">
+            <img src="../assets/map.png" alt="Map Image"
                 class="mx-auto md:rounded-[23.22px] rounded-lg object-fit md:w-auto h-full w-full">
         </div>
 
@@ -438,15 +173,13 @@
     <!-- Testimonials -->
     <section id="testimonials-section" class="text-center md:p-24 py-6 px-2 flex flex-col md:gap-10 gap-6">
         <div>
-            <img src="http://127.0.0.1:8000/assets/testimonials.svg" alt="Heading Image"
-                class="mx-auto mb-6 md:block hidden">
-            <img src="http://127.0.0.1:8000/assets/mobile-testimonials.png" alt="testimonials logo"
-                class="mx-auto md:hidden block">
+            <img src="../assets/testimonials.svg" alt="Heading Image" class="mx-auto mb-6 md:block hidden">
+            <img src="../assets/mobile-testimonials.png" alt="testimonials logo" class="mx-auto md:hidden block">
         </div>
 
         <div class="owl-carousel md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-4">
 
-            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4  bg-white rounded-md shadow-md">
+            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4 my-4 bg-white rounded-md shadow-md">
 
                 <div id="star-ratings" class="mb-2 md:mb-5">
                     <div class="flex items-center">
@@ -484,7 +217,7 @@
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4  bg-white rounded-md shadow-md">
+            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4 my-4 bg-white rounded-md shadow-md">
                 <div id="star-ratings" class="mb-2 md:mb-5">
                     <div class="flex items-center">
                         <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -521,7 +254,7 @@
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4  bg-white rounded-md shadow-md">
+            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4 my-4 bg-white rounded-md shadow-md">
                 <div id="star-ratings" class="mb-2 md:mb-5">
                     <div class="flex items-center">
                         <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -557,7 +290,7 @@
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4  bg-white rounded-md shadow-md">
+            <div class="testimonial-card flex flex-col items-start gap-6 py-8 px-4 my-4 bg-white rounded-md shadow-md">
                 <div id="star-ratings" class="mb-2 md:mb-5">
                     <div class="flex items-center">
                         <svg class="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -614,6 +347,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script>
+        const navbarContainer = document.querySelector('.max-w-screen-xl');
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0 && !scrolled) {
+                navbarContainer.classList.add('scrolled-container');
+                navbar.classList.remove('bg-opacity-50');
+                navbar.classList.remove('bg-black');
+                navbar.classList.add('bg-[#313E8D]');
+                scrolled = true;
+            } else if (window.scrollY === 0 && scrolled) {
+                navbarContainer.classList.remove('scrolled-container');
+                navbar.classList.add('bg-opacity-50');
+                navbar.classList.add('bg-black');
+                navbar.classList.remove('bg-[#313E8D]');
+                scrolled = false;
+            }
+        });
+    </script>
+
 
 </body>
 

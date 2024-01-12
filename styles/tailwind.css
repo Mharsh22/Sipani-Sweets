@@ -3,12 +3,12 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;&display=swap');
 
-*{
+* {
     font-family: 'Lato', sans-serif;
 }
 
-body{
-    background-image: url('../assets/OBJECTS.png');
+body {
+    background: url('../assets/OBJECTS.png');
 }
 
 .light-text {
@@ -25,9 +25,9 @@ body{
 
 
 
-#about-us-section{
-    position:relative;
-    background: linear-gradient(0deg, rgba(2, 36, 253, 0.28) 0%, rgba(49, 62, 141, 0.45) 100%), url('../assets/about.png'), lightgray 50% / cover no-repeat;
+#about-us-section {
+    position: relative;
+    background: url('../assets/about.png'), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -37,26 +37,27 @@ body{
 
 section#location-section {
     position: relative;
-    background: linear-gradient(0deg, rgba(2, 36, 253, 0.28) 0%, rgba(49, 62, 141, 0.45) 100%), url(../assets/Crousel.png), lightgray 50% / cover no-repeat;
+    background: url('../assets/Location.png'), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    
+
 }
 
-.testimonial-card{
+.testimonial-card {
     background-image: url('../assets/entypo_quote.png');
     background-repeat: no-repeat;
     background-position: 7% 23%;
 }
 
-.footer-form input, .footer-form textarea{
+.footer-form input,
+.footer-form textarea {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.24);
 }
 
-#logo img{
+#logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -64,45 +65,56 @@ section#location-section {
     image-rendering: -webkit-optimize-contrast;
 }
 
-.owl-carousel.owl-loaded{
+.owl-carousel.owl-loaded {
     position: relative;
 }
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+
+
     position: absolute;
     top: 100px;
     border-radius: 16px;
-    border: 0.5px solid rgba(0, 0, 0, 0.10)!important;
-    background: #313E8D!important;
-    color: white!important;
+    border: 0.5px solid rgba(0, 0, 0, 0.10);
+    background: #FFF !important;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    /* display: flex; */
+
     width: 48px;
     height: 48px;
-    padding: 14px 0px!important;
+    padding: 14px 0px !important;
     justify-content: center;
     align-items: center;
     z-index: 5;
 }
-.owl-carousel .owl-nav button.owl-prev{
+
+.owl-carousel .owl-nav button.owl-prev {
     left: -65px;
 }
 
-.owl-carousel .owl-nav button.owl-next{
+.owl-carousel .owl-nav button.owl-next {
     right: -65px;
 }
 
-.text-392d76 {
-    color: #392d76;
+.text-F7ED17 {
+    color: #F7ED17;
+}
+
+.scrolled-container {
+    max-width: 90%;
+    transition: max-width 1s;
 }
 
 @layer components {
     .active-link {
-        @apply font-bold underline text-392d76;
+        @apply font-bold underline;
     }
 }
 
-@media  only screen and ( max-width: 768px) {
-    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
-        display: none!important;
+@media only screen and (max-width: 768px) {
+
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        display: none !important;
     }
 }

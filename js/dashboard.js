@@ -3,13 +3,14 @@ $('.owl-carousel').owlCarousel({
     margin: 20,
     nav: true,
     dots: false,
+    navText: ["<img class='mx-auto' src='../assets/icons/left.svg'>", "<img class='mx-auto' src='../assets/icons/right.svg'>"],
     responsive: {
         0: {
             items: 1
         },
         600: {
             items: 2,
-            nav:false
+            nav: false
         },
         1000: {
             items: 3
